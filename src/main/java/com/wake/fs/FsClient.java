@@ -69,11 +69,11 @@ public class FsClient {
         Client client = inBand();
         if (client != null) {
             // 呼叫1002-播放语音
-            client.sendSyncApiCommand("originate", "{ignore_early_media=true}user/1000 &playback(text/end.wav)");
+            client.sendSyncApiCommand("originate", "{ignore_early_media=true}user/1002 &playback(text/end.wav)");
             // 呼叫手机-执行lua脚本
             // client.sendSyncApiCommand("originate", "{ignore_early_media=true}sofia/gateway/fs_sg/18621730742 &lua(welcome.lua)");
             // 建立1002和1000的通话
-            /// client.sendSyncApiCommand("originate", "user/1002 &bridge(user/1000)");
+            ///client.sendSyncApiCommand("originate", "user/1002 &bridge(user/1000)");
             client.close();
         }
     }
